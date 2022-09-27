@@ -12,7 +12,8 @@
   },
   "scripts": {
     "start": "node server.js",
-    "seed": "node seeds/seed.js"
+    "seed": "node seeds/seed.js",
+    "dev": "nodemon --watch server.js"
   },
   "name": "tech-blog",
   "description": "",
