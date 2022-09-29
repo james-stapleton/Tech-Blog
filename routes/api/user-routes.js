@@ -6,6 +6,7 @@ const router = Router();
 router.get('/', async (req,res) => {
     try { 
     const userData = await User.findAll();
+    console.log(userData);
     if (!userData) {
         res.status(404).json({message: "No users found"});
     }
