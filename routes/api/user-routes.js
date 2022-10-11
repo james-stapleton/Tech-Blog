@@ -1,11 +1,11 @@
 const { Router } = require('express');
-const {User} = require('../../models');
+const {User, Blog} = require('../../models');
 
 const router = Router();
 
 router.get('/', async (req,res) => {
     try { 
-    const userData = await User.findAll();
+    const userData = await User.findAll( {include: Blog});
     console.log(userData);
     if (!userData) {
         res.status(404).json({message: "No users found"});
