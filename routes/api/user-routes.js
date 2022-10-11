@@ -32,7 +32,7 @@ router.get('/:id', async (req,res) => {
 // create a new user and log them in
 router.post('/', async (req, res) => {
     try {
-      const userData = await Users.create(req.body);
+      const userData = await User.create(req.body);
   
       req.session.save(() => {
         req.session.user_id = userData.id;

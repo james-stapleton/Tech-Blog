@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+<script src=""></script>
+<link rel="stylesheet" href="/css/styles.css">
+<link rel="stylesheet" href="/css/rating.css">
+<title>Cocktail Curator</title>
+</head>
+<body>
+
+ <nav class="navbar">
+  <form class="form-inline">
+    <a href="/"><button class="btn btn-outline-success" type="button">Homepage</button></a>
+    <a href="/dashboard"><button class="btn btn-outline-success" type="button">Dashboard</button></a>
+    <a href="/login"><button class="btn btn-outline-success" type="button">Login</button></a>
+    <a href="/"><h1 class="text-white">Tech Blog</h1></a>
+   
+  </form>
+</nav>
+
+   <main class="container container-fluid mt-5">
+    {{{ body }}}
+  </main>
+ 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+
+  {{!-- <script src="/js/logout.js"></script> --}}
+</body>
+</html>
