@@ -13,27 +13,27 @@ getBlogs = async (currentUser) => {
     user = await fetch(`http://localhost:3001/id`)
     .then((response) => response.json()
     .then((user) => {
-        fetch(`http://localhost:3001/api/blogs/u/${user}`)
+        fetch(`http://localhost:3001/api/blogs/one/${user}`)
     .then((response) => response.json())
     .then((data) => {
         console.log(data);
-        // const template = Handlebars.compile(`{{data}}
+        const dataObject = {data:data};
+        const template = Handlebars.compile(`{{#each data}}
         
-        // {{#each this.blogs}}
-        // {{blogs.title}}
+        <div class="card card-body">
+        <h3>{{this.title}}</h3>
+        <p>{{this.text}}</p>
+        <p>Posted by user {{this.user_id}} </p>
+        </div>
         
         
-        // {{/each}}`)
-        // const filled = template(data);
+        {{/each}}`)
+        const filled = template(dataObject);
 
-        // console.log("filled-------------",filled);
+        console.log("filled-------------",filled);
 
-        // const blogEl = document.querySelector("#output");
-        // blogEl.innerHTML = filled;
-
-
-
-
+        const blogEl = document.querySelector("#output");
+        blogEl.innerHTML = filled;
     })
     }))
 }
