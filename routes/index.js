@@ -7,7 +7,7 @@ router.use('/', homeRoutes);
 
 
 router.use((req,res) => {
-    res.send("<h1>No route specified</h1>");
+    res.send("<h1>Idiot program</h1>");
 });
 
 module.exports = router;
