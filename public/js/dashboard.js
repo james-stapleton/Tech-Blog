@@ -3,17 +3,17 @@ console.log("dashboard scripts linked");
 let currentUser;
 
 getUser = async (currentUser) => {
-    user = await fetch(`http://localhost:3001/id`)
+    user = await fetch(`/id`)
     .then((response) => response.json())
     currentUser = user;
     return currentUser;
 }
 
 getBlogs = async (currentUser) => {
-    user = await fetch(`http://localhost:3001/id`)
+    user = await fetch(`/id`)
     .then((response) => response.json()
     .then((user) => {
-        fetch(`http://localhost:3001/api/blogs/one/${user}`)
+        fetch(`/api/blogs/one/${user}`)
     .then((response) => response.json())
     .then((data) => {
         console.log(data);

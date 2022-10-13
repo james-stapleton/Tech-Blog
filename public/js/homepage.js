@@ -1,6 +1,6 @@
 console.log("file linked!")
 
-fetch("http://localhost:3001/api/blogs")
+fetch("/api/blogs")
   .then((response) => response.json())
   .then((data) => {
     console.log(data);
