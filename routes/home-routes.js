@@ -18,7 +18,7 @@ router.get('/dashboard', (req,res) => {
         res.render('login', );
     }
     else {
-        res.render('dashboard', {user_id: req.session.user_id});
+        res.render('dashboard', {user_id: req.session.user_id, name: req.session.username } );
     }
 })
 

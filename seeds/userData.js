@@ -7,13 +7,13 @@ const userData =
         "password": "password"
     },
     {
-        "name": "test",
-        "email": "james2@test.com",
+        "name": "Bob",
+        "email": "bob@test.com",
         "password": "password"
     },
     {
-        "name": "tfdsft",
-        "email": "jamsadf@test.com",
+        "name": "Joe",
+        "email": "joe@test.com",
         "password": "password"
     }
 ];
