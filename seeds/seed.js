@@ -1,6 +1,8 @@
 const sequelize = require('../config/connection'); 
 const seedUsers = require('./userData');
 const seedBlogs = require('./blogData')
+const seedComments = require('./commentData');
+
 const seedDatabase = async () => {
     await sequelize.sync( { force: true } );
 
@@ -8,8 +10,10 @@ const seedDatabase = async () => {
 
     const blogs = await seedBlogs();
 
-    if (users && blogs) {
-        console.log("Users and blogs seeded!");
+    const comments = await seedComments();
+
+    if (users && blogs && comments) {
+        console.log("Users, comments and blogs seeded!");
         process.exit(0);
     }
     else {
