@@ -31,9 +31,14 @@ router.get('/login', (req,res) => {
     }
 })
 
+router.get('/blog/:id', (req,res) => {
+    res.render('blog', {layout: 'main', id: req.params.id})
+})
+
 router.get('/id', (req,res) => {
     const id = req.session.user_id;
     res.status(200).json(id);
 }) 
+
 
 module.exports = router;

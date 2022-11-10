@@ -1,5 +1,6 @@
 console.log("dashboard scripts linked");
-
+const username = document.getElementsByClassName('name')[0].id;
+console.log(username)
 let currentUser;
 
 getUser = async (currentUser) => {
@@ -23,7 +24,7 @@ getBlogs = async (currentUser) => {
         <div class="card card-body">
         <h3>{{this.title}}</h3>
         <p>{{this.text}}</p>
-        <p>Posted by user {{this.user_id}} </p>
+        <p>Posted by user {{this.username}} </p>
         </div>
         
         
@@ -70,7 +71,7 @@ newBlog = () => {
         if (title && text) {
             const upload = await fetch('api/blogs/', {
                 method: 'POST',
-                body: JSON.stringify( {title, text, user_id}),
+                body: JSON.stringify( {title, text, user_id, username: username}),
                 headers: {'Content-Type': 'application/json'},
             });
         }

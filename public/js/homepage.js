@@ -10,7 +10,8 @@ fetch("/api/blogs")
     <div class="card card-body">
     <h3>{{this.title}}</h3>
     <p>{{this.text}}</p>
-    <p>Posted by user {{this.user_id}} </p>
+    <p>Posted by user {{this.username}} </p>
+    <a href="/blog/{{this.id}}"><button> View Comments </button></a>
     </div>
     
     {{/each}}`);
