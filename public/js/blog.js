@@ -6,7 +6,6 @@ fetch(`/api/blogs/${blog}`)
   .then((response) => response.json())
   .then((data) => {
     console.log(data);
-    console.log(data.comments[0].text);
     const template = Handlebars.compile(`{{data}}
 
     <div class="card card-body">
