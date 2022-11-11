@@ -45,12 +45,12 @@ newBlog = () => {
     const template = Handlebars.compile(`
     <form class="form blog-form">
     <div class="form-group">
-      <label for="title">email:</label>
+      <label for="title">Title:</label>
       <input class="form-input" type="title" id="blog-title" />
     </div>
     <div class="form-group">
-      <label for="body">password:</label>
-      <input class="form-input" type="body" id="blog-body" />
+      <label for="body">body:</label>
+      <textarea class="form-input" type="body" id="blog-body"> </textarea>
     </div>
     <div class="form-group">
       <button class="btn btn-primary" type="submit">Submit</button>

@@ -1,10 +1,46 @@
-* {
+body {
     color: black;
-    /* background-color: grey; */
+    background-color: grey;
+}
+
+.navbar {
+    background: linear-gradient(to bottom right, gray, black);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+.home {
+    text-decoration: none   ;
+    color: rgb(13, 218, 13);
+}
+
+nav {
+    padding-bottom: 60px;
+    padding-top: 60px;
+}
+
+footer {
+    display: flex;
+    padding: 10px 20px;
+}
+
+.footer-btn {
+    margin-right: auto;
+}
+
+.blog-text {
+    padding: 10px;
+    font-size: 18px;
+}
+
+.nav-wrapper {
+    padding-top: 70px;
 }
 
 .container {
-    background-color: grey;
+    background-color: blue;
 }
 
 .card {

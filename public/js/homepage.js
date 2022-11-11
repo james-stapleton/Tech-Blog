@@ -7,11 +7,18 @@ fetch("/api/blogs")
     const blogData = {data: data};
     const template = Handlebars.compile(`{{#each data}}
 
-    <div class="card card-body">
+    <div class="card bg-success">
+    <div class = "card-header bg-dark text-success text-center">
     <h3>{{this.title}}</h3>
-    <p>{{this.text}}</p>
-    <p>Posted by user {{this.username}} </p>
-    <a href="/blog/{{this.id}}"><button> View Comments </button></a>
+    </div>
+    <p class = "blog-text" >{{this.text}}</p>
+
+      <footer > 
+
+        <a class = "footer-btn" href="/blog/{{this.id}}"><button class = " btn btn-outline-dark"> View Comments </button></a>
+        <p class = "footer" >Posted by {{this.username}} at {{this.createdAt}}</p>
+        
+      </footer>
     </div>
     
     {{/each}}`);
